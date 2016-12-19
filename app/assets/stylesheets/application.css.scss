@@ -31,6 +31,23 @@ h1, h2, h3 {
   border: none;
 }
 
+.navbar-default .navbar-brand{
+  color: #0033ff;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #0033ff;
+  opacity: 0.75;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #0033ff;
+  opacity: 0.75;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #0033ff;
+}
 .home-page {
   margin-top:-20px;
   padding-top: 50px;
