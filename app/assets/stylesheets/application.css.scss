@@ -48,20 +48,18 @@ h1, h2, h3 {
   }
 }
 
-/*.navbar-default .navbar-brand:hover, 
-  .navbar-default .navbar-nav > li > a:hover{
-    color: #0033ff;
-    opacity: 0.75;
-}*/
-
-/*.navbar-default .navbar-nav > li > a:hover {
-  color: #0033ff;
-  opacity: 0.75;
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: #0033ff;
-}*/
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #c0c0aa;
+}
 
 .home-page {
   margin-top:-20px;
