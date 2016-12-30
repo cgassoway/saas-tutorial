@@ -7,6 +7,9 @@ class ContactsController < ApplicationController
   end
   
   def create
+    # Build contact database record
+    # contact_params is from the private function
+    #  where the inputs from the contact_us page are stored
     @contact = Contact.new(contact_params)
     if @contact.save()
       #Build email message if save successful
