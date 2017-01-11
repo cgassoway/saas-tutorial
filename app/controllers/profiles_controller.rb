@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
   
   def new
     # Render profile form
+    @profile = Profile.new
     
   end
 end
