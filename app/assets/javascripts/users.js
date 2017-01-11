@@ -62,15 +62,10 @@ $(document).on('turbolinks:load', function() {
   function stripeResponseHandler(status, response) {
     // Get the token from the response
     var token = response.id;
-    
+
     // Inject card token in hidden field
-    
-    theForm.append( $('<input type="hidden"> name = "user[stripe_card_token]">').val(token) );
-    
+    theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+    // Submit form
     theForm.get(0).submit();
   }
-  
-  // Inject card token as hidden field
-  
-  // Submit form
 });
