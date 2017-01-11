@@ -7,6 +7,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     # inherit create from Devise action and extend to User
     super do |resource|
+      # params[:plan] comes from hidded field in pro_form.html helper
       if params[:plan]
         resource.plan_id = params[:plan]
         if resource.plan_id == 2

@@ -65,7 +65,7 @@ $(document).on('turbolinks:load', function() {
 
     // Inject card token in hidden field
     theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
-    // Submit form
+     // Submit form
     theForm.get(0).submit();
   }
 });
