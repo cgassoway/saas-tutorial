@@ -23,6 +23,15 @@ class ProfilesController < ApplicationController
     end
   end
   
+  # GET /users/:user_id/profile/edit
+  def edit
+    # Find user to link to profile
+    @user = User.find( params[:user_id])
+    
+    # get user profile and pass to form
+    @profile = @user.profile
+  end
+    
   
   private
     def profile_params
