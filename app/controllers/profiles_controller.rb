@@ -1,5 +1,12 @@
 class ProfilesController < ApplicationController
   
+  # Be sure user is logged in before allowing access - devise built-in function
+  before_action :authenticate_user!
+  
+  # Be sure this is the actual user accessing this profile for editing
+  # function defined in private
+  before_action :only_current_user
+  
   # GET /users/:user_id/profile/new
   
   def new
@@ -52,5 +59,10 @@ class ProfilesController < ApplicationController
   private
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
+    end
+    
+    def only_current_user
+      @user = User.find(params[:user_id])
+      redirect_to root_url unless @user == current_user
     end
 end
